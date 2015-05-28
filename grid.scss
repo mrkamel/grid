@@ -1,0 +1,353 @@
+@import url("//cdn.jsdelivr.net/font-zero-width/latest/zero-width.css");
+
+$grid-xs-max: 767px;
+
+$grid-sm-min: 768px;
+$grid-sm-max: 991px;
+
+$grid-md-min: 992px;
+$grid-md-max: 1199px;
+
+$grid-lg-min: 1200px;
+
+@mixin grid-1 { width: 8.33333%; }
+@mixin grid-2 { width: 16.66667%; }
+@mixin grid-3 { width: 25%; }
+@mixin grid-4 { width: 33.33333%; }
+@mixin grid-5 { width: 41.66667%; }
+@mixin grid-6 { width: 50%; }
+@mixin grid-7 { width: 58.33333%; }
+@mixin grid-8 { width: 66.66667%; }
+@mixin grid-9 { width: 75%; }
+@mixin grid-10 { width: 83.33333%; }
+@mixin grid-11 { width: 91.66667%; }
+@mixin grid-12 { width: 100%; }
+@mixin grid-auto { width: auto; }
+
+@mixin row {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  zoom: 1;
+
+  &:after {
+    visibility: hidden;
+    display: block;
+    content: ".";
+    font-size: 0;
+    clear: both;
+    height: 0;
+  }
+}
+
+@mixin column {
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  @include row;
+}
+
+.col-xs-1 { @include column; @include grid-1; }
+.col-xs-2 { @include column; @include grid-2; }
+.col-xs-3 { @include column; @include grid-3; }
+.col-xs-4 { @include column; @include grid-4; }
+.col-xs-5 { @include column; @include grid-5; }
+.col-xs-6 { @include column; @include grid-6; }
+.col-xs-7 { @include column; @include grid-7; }
+.col-xs-8 { @include column; @include grid-8; }
+.col-xs-9 { @include column; @include grid-9; }
+.col-xs-10 { @include column; @include grid-10; }
+.col-xs-11 { @include column; @include grid-11; }
+.col-xs-12 { @include column; @include grid-12; }
+.col-xs { @include column; @include grid-auto; }
+
+.col-sm-1 { @include column; @include grid-1; }
+.col-sm-2 { @include column; @include grid-2; }
+.col-sm-3 { @include column; @include grid-3; }
+.col-sm-4 { @include column; @include grid-4; }
+.col-sm-5 { @include column; @include grid-5; }
+.col-sm-6 { @include column; @include grid-6; }
+.col-sm-7 { @include column; @include grid-7; }
+.col-sm-8 { @include column; @include grid-8; }
+.col-sm-9 { @include column; @include grid-9; }
+.col-sm-10 { @include column; @include grid-10; }
+.col-sm-11 { @include column; @include grid-11; }
+.col-sm-12 { @include column; @include grid-12; }
+.col-sm { @include column; @include grid-auto; }
+
+.col-md-1 { @include column; @include grid-1; }
+.col-md-2 { @include column; @include grid-2; }
+.col-md-3 { @include column; @include grid-3; }
+.col-md-4 { @include column; @include grid-4; }
+.col-md-5 { @include column; @include grid-5; }
+.col-md-6 { @include column; @include grid-6; }
+.col-md-7 { @include column; @include grid-7; }
+.col-md-8 { @include column; @include grid-8; }
+.col-md-9 { @include column; @include grid-9; }
+.col-md-10 { @include column; @include grid-10; }
+.col-md-11 { @include column; @include grid-11; }
+.col-md-12 { @include column; @include grid-12; }
+.col-md { @include column; @include grid-auto; }
+
+.col-lg-1 { @include column; @include grid-1; }
+.col-lg-2 { @include column; @include grid-2; }
+.col-lg-3 { @include column; @include grid-3; }
+.col-lg-4 { @include column; @include grid-4; }
+.col-lg-5 { @include column; @include grid-5; }
+.col-lg-6 { @include column; @include grid-6; }
+.col-lg-7 { @include column; @include grid-7; }
+.col-lg-8 { @include column; @include grid-8; }
+.col-lg-9 { @include column; @include grid-9; }
+.col-lg-10 { @include column; @include grid-10; }
+.col-lg-11 { @include column; @include grid-11; }
+.col-lg-12 { @include column; @include grid-12; }
+.col-lg { @include column; @include grid-auto; }
+
+@mixin row-inline-block {
+  font-family: "zero-width";
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.row-inline-block {
+  @include row-inline-block;
+}
+
+@mixin column-inline-block {
+  font-family: Arial, Helvetica, Sans;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  float: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column-inline-block {
+  @include column-inline-block;
+}
+
+.grid-xs-show, .grid-sm-show, .grid-md-show, .grid-lg-show { display: none; }
+
+@media (max-width: $grid-xs-max) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 { @include grid-12; }
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 { @include grid-12; }
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 { @include grid-12; }
+
+  .grid-sm {
+    display: block;
+    width: 100%;
+  }
+
+  .grid-xs-hide { display: none; }
+  .grid-xs-show { display: block; }
+}
+
+@media (max-width: $grid-sm-max) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 { @include grid-12; }
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 { @include grid-12; }
+
+  .grid-md {
+    display: block;
+    width: 100%;
+  }
+
+  .grid-sm-hide { display: none; }
+  .grid-sm-show { display: block; }
+}
+
+@media (max-width: $grid-md-max) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 { @include grid-12; }
+
+  .grid-lg {
+    display: block;
+    width: 100%;
+  }
+
+  .grid-md-hide { display: none; }
+  .grid-md-show { display: block; }
+}
+
+@media (min-width: $grid-lg-min) {
+  .grid-lg-hide { display: none; }
+  .grid-lg-show { display: block; }
+}
+
+@media (max-width: $grid-xs-max) {
+  .col-xs-1 { @include grid-1; }
+  .col-xs-2 { @include grid-2; }
+  .col-xs-3 { @include grid-3; }
+  .col-xs-4 { @include grid-4; }
+  .col-xs-5 { @include grid-5; }
+  .col-xs-6 { @include grid-6; }
+  .col-xs-7 { @include grid-7; }
+  .col-xs-8 { @include grid-8; }
+  .col-xs-9 { @include grid-9; }
+  .col-xs-10 { @include grid-10; }
+  .col-xs-11 { @include grid-11; }
+  .col-xs-12 { @include grid-12; }
+  .col-xs { @include grid-auto; }
+}
+
+@media (min-width: $grid-sm-min) and (max-width: $grid-sm-max) {
+  .col-xs-1 { @include grid-1 }
+  .col-xs-2 { @include grid-2; }
+  .col-xs-3 { @include grid-3; }
+  .col-xs-4 { @include grid-4; }
+  .col-xs-5 { @include grid-5; }
+  .col-xs-6 { @include grid-6; }
+  .col-xs-7 { @include grid-7; }
+  .col-xs-8 { @include grid-8; }
+  .col-xs-9 { @include grid-9; }
+  .col-xs-10 { @include grid-10; }
+  .col-xs-11 { @include grid-11; }
+  .col-xs-12 { @include grid-12; }
+  .col-xs { @include grid-auto; }
+
+  .col-sm-1 { @include grid-1 }
+  .col-sm-2 { @include grid-2; }
+  .col-sm-3 { @include grid-3; }
+  .col-sm-4 { @include grid-4; }
+  .col-sm-5 { @include grid-5; }
+  .col-sm-6 { @include grid-6; }
+  .col-sm-7 { @include grid-7; }
+  .col-sm-8 { @include grid-8; }
+  .col-sm-9 { @include grid-9; }
+  .col-sm-1 { @include grid-10; }
+  .col-sm-11 { @include grid-11; }
+  .col-sm-12 { @include grid-12; }
+  .col-sm { @include grid-auto; }
+}
+
+@media (min-width: $grid-md-min) and (max-width: $grid-md-max) {
+  .col-xs-1 { @include grid-1 }
+  .col-xs-2 { @include grid-2; }
+  .col-xs-3 { @include grid-3; }
+  .col-xs-4 { @include grid-4; }
+  .col-xs-5 { @include grid-5; }
+  .col-xs-6 { @include grid-6; }
+  .col-xs-7 { @include grid-7; }
+  .col-xs-8 { @include grid-8; }
+  .col-xs-9 { @include grid-9; }
+  .col-xs-10 { @include grid-10; }
+  .col-xs-11 { @include grid-11; }
+  .col-xs-12 { @include grid-12; }
+  .col-xs { @include grid-auto; }
+
+  .col-sm-1 { @include grid-1 }
+  .col-sm-2 { @include grid-2; }
+  .col-sm-3 { @include grid-3; }
+  .col-sm-4 { @include grid-4; }
+  .col-sm-5 { @include grid-5; }
+  .col-sm-6 { @include grid-6; }
+  .col-sm-7 { @include grid-7; }
+  .col-sm-8 { @include grid-8; }
+  .col-sm-9 { @include grid-9; }
+  .col-sm-10 { @include grid-10; }
+  .col-sm-11 { @include grid-11; }
+  .col-sm-12 { @include grid-12; }
+  .col-sm { @include grid-auto; }
+
+  .col-md-1 { @include grid-1 }
+  .col-md-2 { @include grid-2; }
+  .col-md-3 { @include grid-3; }
+  .col-md-4 { @include grid-4; }
+  .col-md-5 { @include grid-5; }
+  .col-md-6 { @include grid-6; }
+  .col-md-7 { @include grid-7; }
+  .col-md-8 { @include grid-8; }
+  .col-md-9 { @include grid-9; }
+  .col-md-10 { @include grid-10; }
+  .col-md-11 { @include grid-11; }
+  .col-md-12 { @include grid-12; }
+  .col-md { @include grid-auto; }
+}
+
+@media (min-width: $grid-lg-min) {
+  .col-xs-1 { @include grid-1 }
+  .col-xs-2 { @include grid-2; }
+  .col-xs-3 { @include grid-3; }
+  .col-xs-4 { @include grid-4; }
+  .col-xs-5 { @include grid-5; }
+  .col-xs-6 { @include grid-6; }
+  .col-xs-7 { @include grid-7; }
+  .col-xs-8 { @include grid-8; }
+  .col-xs-9 { @include grid-9; }
+  .col-xs-10 { @include grid-10; }
+  .col-xs-11 { @include grid-11; }
+  .col-xs-12 { @include grid-12; }
+  .col-xs { @include grid-auto; }
+
+  .col-sm-1 { @include grid-1 }
+  .col-sm-2 { @include grid-2; }
+  .col-sm-3 { @include grid-3; }
+  .col-sm-4 { @include grid-4; }
+  .col-sm-5 { @include grid-5; }
+  .col-sm-6 { @include grid-6; }
+  .col-sm-7 { @include grid-7; }
+  .col-sm-8 { @include grid-8; }
+  .col-sm-9 { @include grid-9; }
+  .col-sm-10 { @include grid-10; }
+  .col-sm-11 { @include grid-11; }
+  .col-sm-12 { @include grid-12; }
+  .col-sm { @include grid-auto; }
+
+  .col-md-1 { @include grid-1 }
+  .col-md-2 { @include grid-2; }
+  .col-md-3 { @include grid-3; }
+  .col-md-4 { @include grid-4; }
+  .col-md-5 { @include grid-5; }
+  .col-md-6 { @include grid-6; }
+  .col-md-7 { @include grid-7; }
+  .col-md-8 { @include grid-8; }
+  .col-md-9 { @include grid-9; }
+  .col-md-10 { @include grid-10; }
+  .col-md-11 { @include grid-11; }
+  .col-md-12 { @include grid-12; }
+  .col-md { @include grid-auto; }
+
+  .col-lg-1 { @include grid-1 }
+  .col-lg-2 { @include grid-2; }
+  .col-lg-3 { @include grid-3; }
+  .col-lg-4 { @include grid-4; }
+  .col-lg-5 { @include grid-5; }
+  .col-lg-6 { @include grid-6; }
+  .col-lg-7 { @include grid-7; }
+  .col-lg-8 { @include grid-8; }
+  .col-lg-9 { @include grid-9; }
+  .col-lg-10 { @include grid-10; }
+  .col-lg-11 { @include grid-11; }
+  .col-lg-12 { @include grid-12; }
+  .col-lg { @include grid-auto; }
+}
+
+@mixin grid-xs {
+  @media (max-width: $grid-xs-max) {
+    @content;
+  }
+}
+
+@mixin grid-sm {
+  @media (min-width: 769px) and (max-width: $grid-sm-max) {
+    @content;
+  }
+}
+
+@mixin grid-md {
+  @media (min-width: $grid-md-min) and (max-width: $grid-md-max) {
+    @content;
+  }
+}
+
+@mixin grid-lg {
+  @media (min-width: $grid-lg-min) {
+    @content;
+  }
+}
+
