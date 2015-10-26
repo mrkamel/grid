@@ -51,6 +51,62 @@ $grid-lg-min: 1200px;
   @include row;
 }
 
+.grid-xs-1 { @include grid-1; }
+.grid-xs-2 { @include grid-2; }
+.grid-xs-3 { @include grid-3; }
+.grid-xs-4 { @include grid-4; }
+.grid-xs-5 { @include grid-5; }
+.grid-xs-6 { @include grid-6; }
+.grid-xs-7 { @include grid-7; }
+.grid-xs-8 { @include grid-8; }
+.grid-xs-9 { @include grid-9; }
+.grid-xs-10 { @include grid-10; }
+.grid-xs-11 { @include grid-11; }
+.grid-xs-12 { @include grid-12; }
+.grid-xs { @include grid-auto; }
+
+.grid-sm-1 { @include grid-1; }
+.grid-sm-2 { @include grid-2; }
+.grid-sm-3 { @include grid-3; }
+.grid-sm-4 { @include grid-4; }
+.grid-sm-5 { @include grid-5; }
+.grid-sm-6 { @include grid-6; }
+.grid-sm-7 { @include grid-7; }
+.grid-sm-8 { @include grid-8; }
+.grid-sm-9 { @include grid-9; }
+.grid-sm-10 { @include grid-10; }
+.grid-sm-11 { @include grid-11; }
+.grid-sm-12 { @include grid-12; }
+.grid-sm { @include grid-auto; }
+
+.grid-md-1 { @include grid-1; }
+.grid-md-2 { @include grid-2; }
+.grid-md-3 { @include grid-3; }
+.grid-md-4 { @include grid-4; }
+.grid-md-5 { @include grid-5; }
+.grid-md-6 { @include grid-6; }
+.grid-md-7 { @include grid-7; }
+.grid-md-8 { @include grid-8; }
+.grid-md-9 { @include grid-9; }
+.grid-md-10 { @include grid-10; }
+.grid-md-11 { @include grid-11; }
+.grid-md-12 { @include grid-12; }
+.grid-md { @include grid-auto; }
+
+.grid-lg-1 { @include grid-1; }
+.grid-lg-2 { @include grid-2; }
+.grid-lg-3 { @include grid-3; }
+.grid-lg-4 { @include grid-4; }
+.grid-lg-5 { @include grid-5; }
+.grid-lg-6 { @include grid-6; }
+.grid-lg-7 { @include grid-7; }
+.grid-lg-8 { @include grid-8; }
+.grid-lg-9 { @include grid-9; }
+.grid-lg-10 { @include grid-10; }
+.grid-lg-11 { @include grid-11; }
+.grid-lg-12 { @include grid-12; }
+.grid-lg { @include grid-auto; }
+
 .col-xs-1 { @include column; @include grid-1; }
 .col-xs-2 { @include column; @include grid-2; }
 .col-xs-3 { @include column; @include grid-3; }
@@ -110,6 +166,10 @@ $grid-lg-min: 1200px;
 .grid-xs-show, .grid-sm-show, .grid-md-show, .grid-lg-show { display: none; }
 
 @media (max-width: $grid-xs-max) {
+  .grid-sm-1, .grid-sm-2, .grid-sm-3, .grid-sm-4, .grid-sm-5, .grid-sm-6, .grid-sm-7, .grid-sm-8, .grid-sm-9, .grid-sm-10, .grid-sm-11, .grid-sm-12 { @include grid-12; }
+  .grid-md-1, .grid-md-2, .grid-md-3, .grid-md-4, .grid-md-5, .grid-md-6, .grid-md-7, .grid-md-8, .grid-md-9, .grid-md-10, .grid-md-11, .grid-md-12 { @include grid-12; }
+  .grid-lg-1, .grid-lg-2, .grid-lg-3, .grid-lg-4, .grid-lg-5, .grid-lg-6, .grid-lg-7, .grid-lg-8, .grid-lg-9, .grid-lg-10, .grid-lg-11, .grid-lg-12 { @include grid-12; }
+
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 { @include grid-12; }
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 { @include grid-12; }
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 { @include grid-12; }
@@ -124,6 +184,9 @@ $grid-lg-min: 1200px;
 }
 
 @media (max-width: $grid-sm-max) {
+  .grid-md-1, .grid-md-2, .grid-md-3, .grid-md-4, .grid-md-5, .grid-md-6, .grid-md-7, .grid-md-8, .grid-md-9, .grid-md-10, .grid-md-11, .grid-md-12 { @include grid-12; }
+  .grid-lg-1, .grid-lg-2, .grid-lg-3, .grid-lg-4, .grid-lg-5, .grid-lg-6, .grid-lg-7, .grid-lg-8, .grid-lg-9, .grid-lg-10, .grid-lg-11, .grid-lg-12 { @include grid-12; }
+
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 { @include grid-12; }
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 { @include grid-12; }
 
@@ -137,6 +200,8 @@ $grid-lg-min: 1200px;
 }
 
 @media (max-width: $grid-md-max) {
+  .grid-lg-1, .grid-lg-2, .grid-lg-3, .grid-lg-4, .grid-lg-5, .grid-lg-6, .grid-lg-7, .grid-lg-8, .grid-lg-9, .grid-lg-10, .grid-lg-11, .grid-lg-12 { @include grid-12; }
+
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 { @include grid-12; }
 
   .grid-lg {
@@ -154,6 +219,20 @@ $grid-lg-min: 1200px;
 }
 
 @media (max-width: $grid-xs-max) {
+  .grid-xs-1 { @include grid-1; }
+  .grid-xs-2 { @include grid-2; }
+  .grid-xs-3 { @include grid-3; }
+  .grid-xs-4 { @include grid-4; }
+  .grid-xs-5 { @include grid-5; }
+  .grid-xs-6 { @include grid-6; }
+  .grid-xs-7 { @include grid-7; }
+  .grid-xs-8 { @include grid-8; }
+  .grid-xs-9 { @include grid-9; }
+  .grid-xs-10 { @include grid-10; }
+  .grid-xs-11 { @include grid-11; }
+  .grid-xs-12 { @include grid-12; }
+  .grid-xs { @include grid-auto; }
+
   .col-xs-1 { @include grid-1; }
   .col-xs-2 { @include grid-2; }
   .col-xs-3 { @include grid-3; }
@@ -170,6 +249,34 @@ $grid-lg-min: 1200px;
 }
 
 @media (min-width: $grid-sm-min) and (max-width: $grid-sm-max) {
+  .grid-xs-1 { @include grid-1 }
+  .grid-xs-2 { @include grid-2; }
+  .grid-xs-3 { @include grid-3; }
+  .grid-xs-4 { @include grid-4; }
+  .grid-xs-5 { @include grid-5; }
+  .grid-xs-6 { @include grid-6; }
+  .grid-xs-7 { @include grid-7; }
+  .grid-xs-8 { @include grid-8; }
+  .grid-xs-9 { @include grid-9; }
+  .grid-xs-10 { @include grid-10; }
+  .grid-xs-11 { @include grid-11; }
+  .grid-xs-12 { @include grid-12; }
+  .grid-xs { @include grid-auto; }
+
+  .grid-sm-1 { @include grid-1 }
+  .grid-sm-2 { @include grid-2; }
+  .grid-sm-3 { @include grid-3; }
+  .grid-sm-4 { @include grid-4; }
+  .grid-sm-5 { @include grid-5; }
+  .grid-sm-6 { @include grid-6; }
+  .grid-sm-7 { @include grid-7; }
+  .grid-sm-8 { @include grid-8; }
+  .grid-sm-9 { @include grid-9; }
+  .grid-sm-10 { @include grid-10; }
+  .grid-sm-11 { @include grid-11; }
+  .grid-sm-12 { @include grid-12; }
+  .grid-sm { @include grid-auto; }
+
   .col-xs-1 { @include grid-1 }
   .col-xs-2 { @include grid-2; }
   .col-xs-3 { @include grid-3; }
@@ -200,6 +307,48 @@ $grid-lg-min: 1200px;
 }
 
 @media (min-width: $grid-md-min) and (max-width: $grid-md-max) {
+  .grid-xs-1 { @include grid-1 }
+  .grid-xs-2 { @include grid-2; }
+  .grid-xs-3 { @include grid-3; }
+  .grid-xs-4 { @include grid-4; }
+  .grid-xs-5 { @include grid-5; }
+  .grid-xs-6 { @include grid-6; }
+  .grid-xs-7 { @include grid-7; }
+  .grid-xs-8 { @include grid-8; }
+  .grid-xs-9 { @include grid-9; }
+  .grid-xs-10 { @include grid-10; }
+  .grid-xs-11 { @include grid-11; }
+  .grid-xs-12 { @include grid-12; }
+  .grid-xs { @include grid-auto; }
+
+  .grid-sm-1 { @include grid-1 }
+  .grid-sm-2 { @include grid-2; }
+  .grid-sm-3 { @include grid-3; }
+  .grid-sm-4 { @include grid-4; }
+  .grid-sm-5 { @include grid-5; }
+  .grid-sm-6 { @include grid-6; }
+  .grid-sm-7 { @include grid-7; }
+  .grid-sm-8 { @include grid-8; }
+  .grid-sm-9 { @include grid-9; }
+  .grid-sm-10 { @include grid-10; }
+  .grid-sm-11 { @include grid-11; }
+  .grid-sm-12 { @include grid-12; }
+  .grid-sm { @include grid-auto; }
+
+  .grid-md-1 { @include grid-1 }
+  .grid-md-2 { @include grid-2; }
+  .grid-md-3 { @include grid-3; }
+  .grid-md-4 { @include grid-4; }
+  .grid-md-5 { @include grid-5; }
+  .grid-md-6 { @include grid-6; }
+  .grid-md-7 { @include grid-7; }
+  .grid-md-8 { @include grid-8; }
+  .grid-md-9 { @include grid-9; }
+  .grid-md-10 { @include grid-10; }
+  .grid-md-11 { @include grid-11; }
+  .grid-md-12 { @include grid-12; }
+  .grid-md { @include grid-auto; }
+
   .col-xs-1 { @include grid-1 }
   .col-xs-2 { @include grid-2; }
   .col-xs-3 { @include grid-3; }
@@ -244,6 +393,62 @@ $grid-lg-min: 1200px;
 }
 
 @media (min-width: $grid-lg-min) {
+  .grid-xs-1 { @include grid-1 }
+  .grid-xs-2 { @include grid-2; }
+  .grid-xs-3 { @include grid-3; }
+  .grid-xs-4 { @include grid-4; }
+  .grid-xs-5 { @include grid-5; }
+  .grid-xs-6 { @include grid-6; }
+  .grid-xs-7 { @include grid-7; }
+  .grid-xs-8 { @include grid-8; }
+  .grid-xs-9 { @include grid-9; }
+  .grid-xs-10 { @include grid-10; }
+  .grid-xs-11 { @include grid-11; }
+  .grid-xs-12 { @include grid-12; }
+  .grid-xs { @include grid-auto; }
+
+  .grid-sm-1 { @include grid-1 }
+  .grid-sm-2 { @include grid-2; }
+  .grid-sm-3 { @include grid-3; }
+  .grid-sm-4 { @include grid-4; }
+  .grid-sm-5 { @include grid-5; }
+  .grid-sm-6 { @include grid-6; }
+  .grid-sm-7 { @include grid-7; }
+  .grid-sm-8 { @include grid-8; }
+  .grid-sm-9 { @include grid-9; }
+  .grid-sm-10 { @include grid-10; }
+  .grid-sm-11 { @include grid-11; }
+  .grid-sm-12 { @include grid-12; }
+  .grid-sm { @include grid-auto; }
+
+  .grid-md-1 { @include grid-1 }
+  .grid-md-2 { @include grid-2; }
+  .grid-md-3 { @include grid-3; }
+  .grid-md-4 { @include grid-4; }
+  .grid-md-5 { @include grid-5; }
+  .grid-md-6 { @include grid-6; }
+  .grid-md-7 { @include grid-7; }
+  .grid-md-8 { @include grid-8; }
+  .grid-md-9 { @include grid-9; }
+  .grid-md-10 { @include grid-10; }
+  .grid-md-11 { @include grid-11; }
+  .grid-md-12 { @include grid-12; }
+  .grid-md { @include grid-auto; }
+
+  .grid-lg-1 { @include grid-1 }
+  .grid-lg-2 { @include grid-2; }
+  .grid-lg-3 { @include grid-3; }
+  .grid-lg-4 { @include grid-4; }
+  .grid-lg-5 { @include grid-5; }
+  .grid-lg-6 { @include grid-6; }
+  .grid-lg-7 { @include grid-7; }
+  .grid-lg-8 { @include grid-8; }
+  .grid-lg-9 { @include grid-9; }
+  .grid-lg-10 { @include grid-10; }
+  .grid-lg-11 { @include grid-11; }
+  .grid-lg-12 { @include grid-12; }
+  .grid-lg { @include grid-auto; }
+
   .col-xs-1 { @include grid-1 }
   .col-xs-2 { @include grid-2; }
   .col-xs-3 { @include grid-3; }
