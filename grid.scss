@@ -1,11 +1,11 @@
 
-$grid-xs-max: 768px;
+$grid-xs-max: 767px;
 
 $grid-sm-min: 768px;
-$grid-sm-max: 992px;
+$grid-sm-max: 991px;
 
 $grid-md-min: 992px;
-$grid-md-max: 1200px;
+$grid-md-max: 1199px;
 
 $grid-lg-min: 1200px;
 
@@ -513,7 +513,7 @@ $grid-lg-min: 1200px;
 }
 
 @mixin grid-sm {
-  @media (min-width: 769px) and (max-width: $grid-sm-max) {
+  @media (min-width: $grid-sm-min) and (max-width: $grid-sm-max) {
     @content;
   }
 }
